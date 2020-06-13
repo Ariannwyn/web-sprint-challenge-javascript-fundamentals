@@ -17,39 +17,63 @@ const zooAnimals = [
 
 /* Request 1: .forEach()
 
-The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
+The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal.
+displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 const displayNames = [];
+zooAnimals.forEach(function(){
+  displayNames.push(`Name: ${zooAnimals[i]["animal_name"]}, Scientific: ${zooAnimals[i]["scientific_name"]}`)
+  });
+
 console.log(displayNames);
+// I would say instead of using arrayName[index][objectField] syntax. Just use dot notation to access the data object
+// which in this case will be i = { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" }
+// so if we wanted the state for this location we could use i.state
+
 
 /* Request 2: .map()
 
-The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
+The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames,
+each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
 
-const lowCaseAnimalNames
+const lowCaseAnimalNames = []
+function getJustNames(animalNames){
+  lowCaseAnimalNames.push(animalNames)
+
+}
+getJustNames(zooAnimals[i]["animal_name"])
 console.log(lowCaseAnimalNames);
 
-/* Request 3: .filter() 
+/* Request 3: .filter()
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals
-console.log(lowPopulationAnimals);
+let lowPopulationAnimals = Object.values(zooAnimals).filter(zooAnimals => zooAnimals.population < 5);
+console.log(lowPopulationAnimals)
 
-/* Request 4: .reduce() 
+/* Request 4: .reduce()
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-let populationTotal = 0;
-console.log(populationTotal);
+function getPop(zooAnimals){
+  for(let i = 0; i<zooAnimals.length; i++){
+    console.log(zooAnimals[i]["population"])
+    return zooAnimals[i]["population"]
+  }
+}
+
+getPop(zooAnimals)
+
+let populationTotal = zooAnimals.reduce((acc, val) => acc + val, 0)
+console.log(populationTotal)
 
 
-// ==== Callbacks ====  
+// ==== Callbacks ====
 
 /* Step 1: Create a higher-order function
   * Create a higher-order function named consume with 3 parameters: a, b and cb
@@ -61,7 +85,7 @@ console.log(populationTotal);
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
-  * Create a function named multiply that returns the product of two numbers 
+  * Create a function named multiply that returns the product of two numbers
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
@@ -79,4 +103,3 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
-
