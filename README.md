@@ -6,7 +6,7 @@ This challenge allows you to practice the concepts and techniques learned over t
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
-You are not allowed to collaborate during the sprint challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your TL if you need direction. 
+You are not allowed to collaborate during the sprint challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your TL if you need direction.
 
 _You have **three hours** to complete this challenge. Plan your time accordingly._
 
@@ -27,15 +27,31 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+forEach executes a function on each item of the array but doesn't return any values. Instead it can be used to alter the original array, while map creates a new array and returns values to it.
+
 2. Explain the difference between a callback and a higher order function.
+
+A callback is a function that is executed within another function while a higher order function accepts another function as a parameter and it is executed outside of the higher order function.
 
 3. What is closure?
 
+Closure is when you can access the scope of a parent function from an inner child function.
+
 4. Describe the four rules of the 'this' keyword.
+
+Rule 1: The object that "this" refers to is the window or console in the case that the keyword "this" is in global scope.
+
+Rule 2: Whenever you have a "this.example", this refers to the object it is within.
+
+Rule 3: "This" refers to objects created in a constructor function.
+
+Rule 4: "This" is defined whenever "call" or "apply" is used  
 
 5. Why do we need super() in an extended class?
 
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
+The "super" function calls the parent constructor to access its methods.
+
+You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
 
@@ -63,7 +79,7 @@ Test your knowledge of advanced array methods and callbacks.
 
 #### Task B: Closure
 
-This challenge takes a look at closures as well as scope. 
+This challenge takes a look at closures as well as scope.
 * [ ] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
 
 #### Task C: Prototypes
@@ -78,7 +94,7 @@ Once you have completed the prototypes challenge, it's time to convert all your 
 
 In your solutions, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
-### Task 3: Stretch Goals 
+### Task 3: Stretch Goals
 
 There are a few stretch problems found throughout the files, don't work on them until you are finished with MVP requirements!
 
@@ -89,5 +105,3 @@ Follow these steps for completing your project.
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
 - [ ] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete after receiving your pull-request
-
-
